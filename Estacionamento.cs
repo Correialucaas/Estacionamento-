@@ -56,9 +56,8 @@ class Estacionamento
 
     private double CalcularValor(TimeSpan duracao)
     {
-        // Lógica para calcular o valor a ser cobrado pela estadia do veículo
-        // Exemplo simples: R$ 2,00 por hora
-        return Math.Round(duracao.TotalHours * 2, 2);
+        
+        return Math.Round(duracao.TotalHours * 4, 4);
     }
 }
 
@@ -71,6 +70,7 @@ class Program
         // Exemplo de utilização
         estacionamento.AdicionarVeiculo("ABC1234");
         estacionamento.AdicionarVeiculo("XYZ5678");
+        estacionamento.AdicionarVeiculo("EGX8432"); 
         estacionamento.ListarVeiculos();
         estacionamento.RemoverVeiculo("ABC1234");
         estacionamento.ListarVeiculos();
